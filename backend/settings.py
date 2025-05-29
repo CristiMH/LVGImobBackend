@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cjco36++7gaywdm*zgb+ae%r=h!z6p4u*zqd!5my5crrdj##-x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -87,13 +87,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'LVGIMOB',
-        "USER": 'postgres',
-        "PASSWORD": 'AsdLkj123',
-        "HOST": 'localhost',
-        "PORT": '5432',
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'briliana_lvgimob',
+        'USER': 'briliana imobi',
+        'PASSWORD': 'LoginLVG',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
     }
 }
 
